@@ -3,6 +3,10 @@ body {
   font-family: "Montserrat";
 }
 
+a {
+  color: #ff6060;
+}
+
 .logo img {
   height: 68px;
 }

@@ -1,10 +1,16 @@
+import { Link } from "react-router-dom";
+
 export const NavLinks = () => {
   return (
-    <div class="navlinks">
+    <nav class="navlinks">
       <ul>
-        <li>Accueil</li>
-        <li>A Propos</li>
+        <li>
+          <Link to="/accueil">Accueil</Link>
+        </li>
+        <li>
+          <Link to="/about">A Propos</Link>
+        </li>
       </ul>
-    </div>
+    </nav>
   );
 };
