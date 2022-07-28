@@ -2,6 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   padding: 2%;
+  box-sizing: border-box;
+
   background-color: $alt1;
   border-radius: 25px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  max-width: $max-resolution;
 }

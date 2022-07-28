@@ -8,13 +8,13 @@ export const HomePage = () => {
   const [houses, setHouses] = useState(Routes.getHouses());
 
   return (
-    <main className="homepage">
+    <div className="homepage">
       <SmallBanner
         image={bannerImage}
         alt="Rochers proches de l'ocean"
         title="Chez vous, partout et ailleurs"
       />
       <Housing houses={houses} />
-    </main>
+    </div>
   );
 };
