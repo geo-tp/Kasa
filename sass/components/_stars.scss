@@ -1,0 +1,8 @@
+.stars {
+  &__star {
+    color: $alt2;
+    &--active {
+      color: $primary;
+    }
+  }
+}

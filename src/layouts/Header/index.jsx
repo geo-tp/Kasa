@@ -3,7 +3,7 @@ import { NavLinks } from "../../components/NavLinks";
 
 export const Header = () => {
   return (
-    <header class="header">
+    <header className="header">
       <Logo />
       <NavLinks />
     </header>

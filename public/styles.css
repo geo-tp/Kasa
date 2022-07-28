@@ -61,6 +61,41 @@ a {
   width: 40%;
 }
 
+.host-card {
+  display: flex;
+  align-items: center;
+}
+.host-card img {
+  border-radius: 100%;
+  height: 64px;
+  margin-left: 10px;
+}
+.host-card p {
+  color: #ff6060;
+  font-size: 1.1em;
+  max-width: 100px;
+  text-align: right;
+}
+
+.tag {
+  color: white;
+  box-sizing: border-box;
+  background-color: #ff6060;
+  border-radius: 10px;
+  margin-right: 10px;
+  padding: 5px 10px;
+  width: 115px;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.stars__star {
+  color: #e3e3e3;
+}
+.stars__star--active {
+  color: #ff6060;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -114,6 +149,32 @@ a {
   margin: 0 auto;
   margin-bottom: 50px;
   max-width: 1440px;
+}
+
+.house-informations__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.house-informations__top h1 {
+  flex-basis: 50%;
+  font-size: 2em;
+  color: #ff6060;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 150%;
+  margin-bottom: 0;
+}
+.house-informations__top p {
+  color: #ff6060;
+  margin-top: 5px;
+  font-size: 1.1em;
+}
+.house-informations__middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer {

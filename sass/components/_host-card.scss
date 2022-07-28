@@ -1,0 +1,17 @@
+.host-card {
+  display: flex;
+  align-items: center;
+
+  & img {
+    border-radius: 100%;
+    height: 64px;
+    margin-left: 10px;
+  }
+
+  & p {
+    color: $primary;
+    font-size: 1.1em;
+    max-width: 100px;
+    text-align: right;
+  }
+}

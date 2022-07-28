@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-export const Caroussel = ({ images }) => {
-  return <div className="caroussel"></div>;
+export const Carroussel = ({ images }) => {
+  return <div className="carroussel"></div>;
 };
 
-Caroussel.propTypes = {
+Carroussel.propTypes = {
   images: PropTypes.array.isRequired,
 };

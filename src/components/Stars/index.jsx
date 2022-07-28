@@ -1,13 +1,19 @@
 import PropTypes from "prop-types";
 
 export const Stars = ({ number, totalNumber }) => {
+  // We create 2 array of numbers to iterate on it
+  const activeStars = Array.from(Array(parseInt(number)).keys());
+  const inactiveStars = Array.from(
+    Array(parseInt(totalNumber - number)).keys()
+  );
+
   return (
     <div className="stars">
-      {Array(number).map((i) => (
-        <i className="fas fa-star stars__star--active" />
+      {activeStars.map((i) => (
+        <i className="fas fa-2x fa-star stars__star--active" />
       ))}
-      {Array(totalNumber - number).map((i) => (
-        <i className="fas fa-star stars__star" />
+      {inactiveStars.map((i) => (
+        <i className="fas fa-2x fa-star stars__star" />
       ))}
     </div>
   );
