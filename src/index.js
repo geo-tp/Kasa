@@ -7,6 +7,7 @@ import { HomePage } from "./pages/HomePage";
 import { Footer } from "./layouts/Footer";
 import { HouseDetailsPage } from "./pages/HouseDetailsPage";
 import { AboutPage } from "./pages/AboutPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ root.render(
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/house/:id" element={<HouseDetailsPage />} />
+        <Route path=":notfound" element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

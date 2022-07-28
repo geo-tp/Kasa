@@ -1,0 +1,19 @@
+.not-found {
+  margin-bottom: 80px;
+
+  text-align: center;
+  & h1 {
+    color: $primary;
+    font-size: 15em;
+    margin-top: 60px;
+
+    margin-bottom: 40px;
+  }
+
+  & p {
+    font-size: 2em;
+    margin-bottom: 120px;
+    color: $primary;
+    font-weight: 500;
+  }
+}

@@ -280,4 +280,21 @@ a {
   font-size: 1.4em;
 }
 
+.not-found {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.not-found h1 {
+  color: #ff6060;
+  font-size: 15em;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.not-found p {
+  font-size: 2em;
+  margin-bottom: 120px;
+  color: #ff6060;
+  font-weight: 500;
+}
+
 /*# sourceMappingURL=styles.css.map */
