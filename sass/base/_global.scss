@@ -1,5 +1,7 @@
 body {
   font-family: "Montserrat";
+  max-width: $max-resolution;
+  margin: 40px auto;
 }
 
 a {
