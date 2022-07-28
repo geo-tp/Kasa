@@ -13,5 +13,5 @@ export const SmallBanner = ({ image, alt, title }) => {
 SmallBanner.propTypes = {
   image: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };
