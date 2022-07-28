@@ -8,19 +8,26 @@ export const DropDown = ({ title, paragraph, list, isOpen }) => {
     setDropIsOpen(!dropIsOpen);
   };
 
-  if (list) {
-    return;
-  }
-
   return (
     <div className="dropdown">
       <div className="dropdown__top" onClick={handleClick}>
         <span>{title}</span>
-        <i className={isOpen ? "fas fa-angle-up" : "fas fa-angle-down"}></i>
+        <i
+          className={
+            dropIsOpen
+              ? "fas fa-angle-up dropdown__top__angle"
+              : "fas fa-angle-up dropdown__top__angle--reverse"
+          }
+        ></i>
       </div>
       {dropIsOpen && (
         <div className="dropdown__drop">
-          <p>{paragraph}</p>
+          <ul>
+            {list?.map((equipment) => (
+              <li>{equipment}</li>
+            ))}
+            {paragraph && <p>{paragraph}</p>}
+          </ul>
         </div>
       )}
     </div>

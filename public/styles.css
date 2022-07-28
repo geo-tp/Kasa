@@ -101,10 +101,34 @@ a {
   color: #ff6060;
 }
 
+.carroussel {
+  position: relative;
+}
 .carroussel img {
   width: 100%;
   object-fit: cover;
   height: 415px;
+}
+.carroussel__pictures-number {
+  font-size: 1.1em;
+  font-weight: 500;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+.carroussel__angle {
+  font-size: 5em;
+  position: absolute;
+  top: 40%;
+  color: white;
+}
+.carroussel__angle--left {
+  left: 2%;
+}
+.carroussel__angle--right {
+  right: 2%;
 }
 
 .dropdown__top {
@@ -113,6 +137,7 @@ a {
   align-items: center;
   background-color: #ff6060;
   padding: 10px 20px;
+  box-sizing: border-box;
   font-size: 1.1em;
   color: white;
   font-weight: 500;
@@ -120,8 +145,12 @@ a {
   max-width: 1000px;
   margin: 0 auto;
 }
-.dropdown__top i {
+.dropdown__top__angle {
   font-size: 1.5em;
+}
+.dropdown__top__angle--reverse {
+  font-size: 1.5em;
+  transform: rotate(180deg);
 }
 .dropdown__drop {
   color: #ff6060;
@@ -129,11 +158,19 @@ a {
   margin: 0 auto;
   background-color: #f7f7f7;
   border-radius: 10px;
+  width: 100%;
 }
 .dropdown__drop p {
   margin: 0;
   padding: 25px 15px 15px 15px;
   font-size: 1.3em;
+  line-height: 150%;
+}
+.dropdown__drop ul {
+  list-style: none;
+  padding: 25px 15px 15px 15px;
+  margin: 0;
+  line-height: 150%;
 }
 
 .header {
@@ -211,6 +248,13 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.house-informations__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.house-informations__bottom div {
+  flex-basis: 48%;
 }
 
 .footer {

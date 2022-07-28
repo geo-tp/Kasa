@@ -5,6 +5,7 @@
     align-items: center;
     background-color: $primary;
     padding: 10px 20px;
+    box-sizing: border-box;
     font-size: 1.1em;
     color: white;
     font-weight: 500;
@@ -12,8 +13,13 @@
     max-width: 1000px;
     margin: 0 auto;
 
-    & i {
+    &__angle {
       font-size: 1.5em;
+
+      &--reverse {
+        font-size: 1.5em;
+        transform: rotate(180deg);
+      }
     }
   }
 
@@ -23,11 +29,20 @@
     margin: 0 auto;
     background-color: $alt1;
     border-radius: 10px;
+    width: 100%;
 
     & p {
       margin: 0;
       padding: 25px 15px 15px 15px;
       font-size: 1.3em;
+      line-height: 150%;
+    }
+
+    & ul {
+      list-style: none;
+      padding: 25px 15px 15px 15px;
+      margin: 0;
+      line-height: 150%;
     }
   }
 }

@@ -1,7 +1,33 @@
 .carroussel {
+  position: relative;
   & img {
     width: 100%;
     object-fit: cover;
     height: 415px;
+  }
+
+  &__pictures-number {
+    font-size: 1.1em;
+    font-weight: 500;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+  }
+
+  &__angle {
+    font-size: 5em;
+    position: absolute;
+    top: 40%;
+    color: white;
+
+    &--left {
+      left: 2%;
+    }
+
+    &--right {
+      right: 2%;
+    }
   }
 }

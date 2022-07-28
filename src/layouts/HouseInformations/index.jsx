@@ -6,7 +6,6 @@ import { Stars } from "../../components/Stars";
 import { Tag } from "../../components/Tag";
 
 export const HouseInformations = ({ house }) => {
-  console.log(house.rating);
   return (
     <section className="house-informations max-res">
       <Carroussel pictures={house.pictures} />
@@ -32,6 +31,7 @@ export const HouseInformations = ({ house }) => {
           paragraph={house.description}
           isOpen={true}
         />
+        <DropDown title="Equipements" list={house.equipments} isOpen={true} />
       </div>
     </section>
   );
