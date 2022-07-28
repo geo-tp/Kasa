@@ -6,8 +6,11 @@
     line-height: 150%;
     color: $primary;
     font-weight: 500;
-    & li:first-of-type {
+    & li {
       margin-right: 50px;
+    }
+    & li:last-child {
+      margin-right: 0;
     }
   }
 }
