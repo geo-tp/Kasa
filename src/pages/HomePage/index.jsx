@@ -8,7 +8,7 @@ export const HomePage = () => {
   const [houses, setHouses] = useState(Routes.getHouses());
 
   return (
-    <div className="homepage">
+    <div className="homepage max-res">
       <SmallBanner
         image={bannerImage}
         alt="Rochers proches de l'ocean"

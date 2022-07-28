@@ -7,7 +7,7 @@ export const HouseDetailsPage = () => {
   const house = Routes.getHouseById("c67ab8a7");
 
   return (
-    <div>
+    <div className="house-details-page max-res">
       <HouseInformations house={house} />
     </div>
   );

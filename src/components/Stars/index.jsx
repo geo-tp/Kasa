@@ -10,16 +10,22 @@ export const Stars = ({ number, totalNumber }) => {
   return (
     <div className="stars">
       {activeStars.map((i) => (
-        <i className="fas fa-2x fa-star stars__star--active" />
+        <i
+          className="fas fa-2x fa-star stars__star--active"
+          key={`active-star-${i}`}
+        />
       ))}
       {inactiveStars.map((i) => (
-        <i className="fas fa-2x fa-star stars__star" />
+        <i
+          className="fas fa-2x fa-star stars__star"
+          key={`inactive-star-${i}`}
+        />
       ))}
     </div>
   );
 };
 
 Stars.propTypes = {
-  number: PropTypes.number.isRequired,
+  number: PropTypes.string.isRequired,
   totalNumber: PropTypes.number.isRequired,
 };

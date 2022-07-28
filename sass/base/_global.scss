@@ -10,3 +10,8 @@ a {
 
 main {
 }
+
+.max-res {
+  max-width: $max-resolution;
+  margin: 0 auto;
+}

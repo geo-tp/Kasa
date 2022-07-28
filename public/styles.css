@@ -9,6 +9,11 @@ a {
   color: #ff6060;
 }
 
+.max-res {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .logo img {
   height: 68px;
 }
@@ -96,13 +101,46 @@ a {
   color: #ff6060;
 }
 
+.carroussel img {
+  width: 100%;
+  object-fit: cover;
+  height: 415px;
+}
+
+.dropdown__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6060;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.dropdown__top i {
+  font-size: 1.5em;
+}
+.dropdown__drop {
+  color: #ff6060;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+.dropdown__drop p {
+  margin: 0;
+  padding: 25px 15px 15px 15px;
+  font-size: 1.3em;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
   margin-bottom: 70px;
-  max-width: 1440px;
 }
 
 .small-banner {
@@ -110,7 +148,6 @@ a {
   position: relative;
   margin: 0 auto;
   margin-bottom: 40px;
-  max-width: 1440px;
 }
 .small-banner__background {
   position: absolute;
@@ -148,7 +185,6 @@ a {
   border-radius: 25px;
   margin: 0 auto;
   margin-bottom: 50px;
-  max-width: 1440px;
 }
 
 .house-informations__top {
