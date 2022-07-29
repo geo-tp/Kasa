@@ -5,6 +5,7 @@
     object-fit: cover;
     height: 415px;
     border-radius: 25px;
+    box-shadow: 0px 10px 30px 0px $alt4;
   }
 
   &__pictures-number {
@@ -22,6 +23,12 @@
     position: absolute;
     top: 40%;
     color: white;
+    transition: all 300ms;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
 
     &--left {
       left: 2%;

@@ -1,4 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@keyframes appear-slowly-from-top {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@keyframes appear-slowly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   font-family: "Montserrat";
   margin: 40px auto;
@@ -67,6 +85,10 @@ a {
   height: 340px;
   position: relative;
   margin: 2%;
+  transition: all 300ms;
+}
+.house-card:hover {
+  transform: translateY(-10px);
 }
 .house-card__background {
   border-radius: 10px;
@@ -82,6 +104,7 @@ a {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  box-shadow: 0px 10px 30px 0px #a3a2a2;
 }
 .house-card h2 {
   position: absolute;
@@ -112,6 +135,7 @@ a {
   border-radius: 100%;
   height: 64px;
   margin-left: 10px;
+  box-shadow: 0px 0px 10px 0px #a3a2a2;
 }
 .host-card p {
   color: #ff6060;
@@ -179,6 +203,7 @@ a {
   object-fit: cover;
   height: 415px;
   border-radius: 25px;
+  box-shadow: 0px 10px 30px 0px #a3a2a2;
 }
 .carroussel__pictures-number {
   font-size: 1.1em;
@@ -194,6 +219,11 @@ a {
   position: absolute;
   top: 40%;
   color: white;
+  transition: all 300ms;
+  cursor: pointer;
+}
+.carroussel__angle:hover {
+  opacity: 0.6;
 }
 .carroussel__angle--left {
   left: 2%;
@@ -215,7 +245,7 @@ a {
 }
 
 .dropdown {
-  margin-bottom: 25px;
+  margin-bottom: 45px;
 }
 .dropdown__top {
   display: flex;
@@ -230,6 +260,7 @@ a {
   border-radius: 5px;
   max-width: 1000px;
   margin: 0 auto;
+  z-index: 50;
 }
 .dropdown__top__angle {
   font-size: 1.5em;
@@ -246,6 +277,10 @@ a {
   border-radius: 10px;
   width: 100%;
   min-height: 150px;
+  height: 90%;
+  box-shadow: 0px 30px 20px 0px #d4d4d4;
+  animation: appear-slowly-from-top 300ms linear;
+  transform-origin: top;
 }
 .dropdown__drop p {
   margin: 0;
@@ -258,7 +293,6 @@ a {
   padding: 25px 15px 15px 15px;
   margin: 0;
   line-height: 150%;
-  font-size: 1.1em;
   font-weight: 400;
 }
 
@@ -294,6 +328,7 @@ a {
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  box-shadow: 0px 5px 20px 0px #a3a2a2;
 }
 .small-banner h1 {
   position: absolute;
@@ -327,6 +362,7 @@ a {
   flex-wrap: wrap;
   padding: 2%;
   box-sizing: border-box;
+  box-shadow: 0px 0px 40px 0px #d4d4d4;
   background-color: #f7f7f7;
   border-radius: 25px;
   margin: 0 auto;
@@ -336,6 +372,7 @@ a {
   .housing {
     padding: 0;
     background-color: transparent;
+    box-shadow: none;
   }
 }
 
@@ -433,6 +470,22 @@ a {
   margin-bottom: 90px;
   color: #ff6060;
   font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .not-found h1 {
+    margin-top: 50px;
+    font-size: 5em;
+    margin-bottom: 10px;
+  }
+  .not-found p {
+    font-size: 1.2em;
+    margin-bottom: 90px;
+    color: #ff6060;
+    font-weight: 500;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 150px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

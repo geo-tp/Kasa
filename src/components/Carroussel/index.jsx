@@ -23,14 +23,18 @@ export const Carroussel = ({ pictures }) => {
   return (
     <div className="carroussel">
       <img src={pictures[displayedPictureIndex]} alt="Pièce de la maison" />
-      <i
-        onClick={handleAngleLeftClick}
-        className="fa fa-angle-left carroussel__angle--left carroussel__angle"
-      ></i>
-      <i
-        onClick={handleAngleRightClick}
-        className="fa fa-angle-right carroussel__angle--right carroussel__angle"
-      ></i>
+      {pictures.length > 1 && (
+        <i
+          onClick={handleAngleLeftClick}
+          className="fa fa-angle-left carroussel__angle--left carroussel__angle"
+        ></i>
+      )}
+      {pictures.length > 1 && (
+        <i
+          onClick={handleAngleRightClick}
+          className="fa fa-angle-right carroussel__angle--right carroussel__angle"
+        ></i>
+      )}
       <span className="carroussel__pictures-number">{`${
         displayedPictureIndex + 1
       }/${pictures.length}`}</span>

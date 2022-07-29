@@ -5,7 +5,7 @@ export const Housing = ({ houses }) => {
   return (
     <section className="housing">
       {houses.map((house) => (
-        <HouseCard house={house} />
+        <HouseCard key={`housecard-${house.id}`} house={house} />
       ))}
     </section>
   );

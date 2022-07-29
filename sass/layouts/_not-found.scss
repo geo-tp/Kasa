@@ -16,4 +16,22 @@
     color: $primary;
     font-weight: 500;
   }
+
+  @include mobile-design {
+    & h1 {
+      margin-top: 50px;
+      font-size: 5em;
+      margin-bottom: 10px;
+    }
+
+    & p {
+      font-size: 1.2em;
+      margin-bottom: 90px;
+      color: $primary;
+      font-weight: 500;
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 150px;
+    }
+  }
 }
