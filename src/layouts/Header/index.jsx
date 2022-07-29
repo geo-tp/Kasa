@@ -3,7 +3,7 @@ import { NavLinks } from "../../components/NavLinks";
 
 export const Header = () => {
   return (
-    <header className="header max-res">
+    <header className="header max-res layout-padding">
       <Logo />
       <NavLinks />
     </header>

@@ -1,14 +1,35 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-export const NavLinks = () => {
+export const NavLinks = (currentPage) => {
+  const { pathname } = useLocation();
+  console.log(pathname);
   return (
     <nav className="navlinks">
       <ul>
         <li>
-          <Link to="/accueil">Accueil</Link>
+          <Link
+            to="/"
+            className={
+              pathname === "/"
+                ? "navlinks__link navlinks__link--active"
+                : "navlinks__link"
+            }
+          >
+            Accueil
+          </Link>
         </li>
         <li>
-          <Link to="/about">A Propos</Link>
+          <Link
+            to="/about"
+            className={
+              pathname === "/about"
+                ? "navlinks__link navlinks__link--active"
+                : "navlinks__link"
+            }
+          >
+            A Propos
+          </Link>
         </li>
       </ul>
     </nav>

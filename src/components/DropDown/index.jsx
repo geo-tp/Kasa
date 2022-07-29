@@ -24,7 +24,7 @@ export const DropDown = ({ title, paragraph, list, isOpen }) => {
         <div className="dropdown__drop">
           <ul>
             {list?.map((equipment) => (
-              <li>{equipment}</li>
+              <li key={`equipment-${equipment}`}>{equipment}</li>
             ))}
             {paragraph && <p>{paragraph}</p>}
           </ul>

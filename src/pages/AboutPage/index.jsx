@@ -4,7 +4,7 @@ import { DropDown } from "../../components/DropDown";
 
 export const AboutPage = () => {
   return (
-    <div className="aboutpage max-res">
+    <div className="aboutpage max-res layout-padding">
       <SmallBanner image={bannerImage} alt="Montagnes enneigées" />
       <DropDown
         title="Fiabilité"

@@ -32,10 +32,12 @@
     background-color: $alt1;
     border-radius: 10px;
     width: 100%;
+    min-height: 150px;
 
     & p {
       margin: 0;
-      font-size: 1.3em;
+      font-size: 1.1em;
+      font-weight: 400;
       line-height: 150%;
     }
 
@@ -44,6 +46,8 @@
       padding: 25px 15px 15px 15px;
       margin: 0;
       line-height: 150%;
+      font-size: 1.1em;
+      font-weight: 400;
     }
   }
 }
