@@ -10,20 +10,19 @@ export const HouseInformations = ({ house }) => {
     <section className="house-informations max-res">
       <Carroussel pictures={house.pictures} />
       <div className="house-informations__top">
-        <div>
-          <h1 className="house-informations">{house.title}</h1>
-          <p className="house-informations">{house.location}</p>
+        <div className="house-informations__top__left">
+          <h1>{house.title}</h1>
+          <p>{house.location}</p>
+          <div>
+            {house.tags.map((tag) => (
+              <Tag tag={tag} key={`tag-${tag}`} />
+            ))}
+          </div>
         </div>
-
-        <HostCard host={house.host} />
-      </div>
-      <div className="house-informations__middle">
-        <div className="house-informations__middle__tags">
-          {house.tags.map((tag) => (
-            <Tag tag={tag} key={`tag-${tag}`} />
-          ))}
+        <div className="house-informations__top__right">
+          <HostCard host={house.host} />
+          <Stars number={house.rating} totalNumber={5} />
         </div>
-        <Stars number={house.rating} totalNumber={5} />
       </div>
       <div className="house-informations__bottom">
         <DropDown

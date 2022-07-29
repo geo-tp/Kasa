@@ -1,6 +1,8 @@
 .host-card {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 
   & img {
     border-radius: 100%;
@@ -16,12 +18,16 @@
   }
 
   @include mobile-design {
+    justify-content: center;
+
     & img {
       height: 32px;
     }
 
     & p {
       max-width: 50px;
+      margin: 0;
+      margin-right: 10px;
     }
   }
 }

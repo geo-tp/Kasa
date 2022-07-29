@@ -4,31 +4,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    & h1 {
-      flex-basis: 50%;
-      font-size: 2em;
-      color: $primary;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 36px;
-      line-height: 150%;
-      margin-bottom: 0;
-    }
-
-    & p {
-      color: $primary;
-      margin-top: 5px;
-      font-size: 1.1em;
-    }
-  }
-
-  &__middle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 20px;
-  }
+    &__left {
+      & h1 {
+        flex-basis: 50%;
+        font-size: 2em;
+        color: $primary;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 150%;
+        margin-bottom: 0;
+      }
 
+      & p {
+        color: $primary;
+        margin-top: 5px;
+        font-size: 1.1em;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      align-items: right;
+    }
+  }
   &__bottom {
     display: flex;
     justify-content: space-between;
@@ -40,12 +42,23 @@
 
   @include mobile-design {
     &__top {
+      display: block;
       & h1 {
         font-size: 1.2em;
       }
 
       & p {
         font-size: 0.8em;
+      }
+
+      &__right {
+        // display: flex;
+        margin-top: 10px;
+        flex-direction: row-reverse;
+
+        justify-content: space-between;
+        align-items: center;
+        // text-align: right;
       }
     }
 
