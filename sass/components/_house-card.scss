@@ -1,8 +1,8 @@
 .house-card {
-  flex-basis: 29.5%;
+  flex-basis: 29.2%;
   height: 340px;
   position: relative;
-  margin: 25px;
+  margin: 2%;
   &__background {
     border-radius: 10px;
 
@@ -35,5 +35,11 @@
     font-style: normal;
     font-weight: 500;
     width: 40%;
+  }
+
+  @include mobile-design {
+    flex-basis: 100%;
+    margin: 0;
+    margin-bottom: 30px;
   }
 }

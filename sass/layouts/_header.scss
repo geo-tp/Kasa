@@ -3,4 +3,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 70px;
+
+  @include mobile-design {
+    margin-bottom: 20px;
+  }
 }

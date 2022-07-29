@@ -2,4 +2,10 @@
   & img {
     height: 68px;
   }
+
+  @include mobile-design {
+    & img {
+      height: 47px;
+    }
+  }
 }

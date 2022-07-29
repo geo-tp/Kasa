@@ -32,4 +32,22 @@
     transform: translate(-50%, -50%);
     color: white;
   }
+
+  @include mobile-design {
+    height: 120px;
+    margin-bottom: 30px;
+
+    &__background {
+      border-radius: 10px;
+    }
+
+    & img {
+      border-radius: 10px;
+    }
+
+    & h1 {
+      font-size: 1.4em;
+      left: 37%;
+    }
+  }
 }

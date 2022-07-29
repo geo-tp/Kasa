@@ -8,4 +8,9 @@
   border-radius: 25px;
   margin: 0 auto;
   margin-bottom: 50px;
+
+  @include mobile-design {
+    padding: 0;
+    background-color: transparent;
+  }
 }
