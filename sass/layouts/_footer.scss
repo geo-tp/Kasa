@@ -15,4 +15,10 @@
   & p {
     font-size: 1.4em;
   }
+
+  @include mobile-design {
+    & p {
+      font-size: 0.8em;
+    }
+  }
 }

@@ -11,15 +11,12 @@ export const Stars = ({ number, totalNumber }) => {
     <div className="stars">
       {activeStars.map((i) => (
         <i
-          className="fas fa-2x fa-star stars__star--active"
+          className="fas fa-star stars__star--active"
           key={`active-star-${i}`}
         />
       ))}
       {inactiveStars.map((i) => (
-        <i
-          className="fas fa-2x fa-star stars__star"
-          key={`inactive-star-${i}`}
-        />
+        <i className="fas fa-star stars__star" key={`inactive-star-${i}`} />
       ))}
     </div>
   );

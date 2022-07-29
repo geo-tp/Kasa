@@ -37,4 +37,20 @@
       flex-basis: 48%;
     }
   }
+
+  @include mobile-design {
+    &__top {
+      & h1 {
+        font-size: 1.2em;
+      }
+
+      & p {
+        font-size: 0.8em;
+      }
+    }
+
+    &__bottom {
+      display: block;
+    }
+  }
 }

@@ -4,6 +4,7 @@
     width: 100%;
     object-fit: cover;
     height: 415px;
+    border-radius: 25px;
   }
 
   &__pictures-number {
@@ -28,6 +29,21 @@
 
     &--right {
       right: 2%;
+    }
+  }
+
+  @include mobile-design {
+    & img {
+      height: 255px;
+      border-radius: 10px;
+    }
+
+    &__angle {
+      font-size: 2em;
+    }
+
+    &__pictures-number {
+      display: none;
     }
   }
 }

@@ -1,8 +1,31 @@
 .stars {
+  & i {
+    margin-right: 15px;
+  }
+
+  & i:last-child {
+    margin-right: 0;
+  }
   &__star {
     color: $alt2;
+    font-size: 1.5em;
+
     &--active {
+      font-size: 1.5em;
+
       color: $primary;
+    }
+  }
+
+  @include mobile-design {
+    & i {
+      margin-right: 10px;
+    }
+    &__star {
+      font-size: 0.8em;
+      &--active {
+        font-size: 0.8em;
+      }
     }
   }
 }

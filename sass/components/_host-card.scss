@@ -14,4 +14,14 @@
     max-width: 100px;
     text-align: right;
   }
+
+  @include mobile-design {
+    & img {
+      height: 32px;
+    }
+
+    & p {
+      max-width: 50px;
+    }
+  }
 }
