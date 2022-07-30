@@ -6,7 +6,6 @@ export class Routes {
   };
 
   static getHouseById = (id) => {
-    console.log(id);
     return data.find((x) => x.id === id);
   };
 }

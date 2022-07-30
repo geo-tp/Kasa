@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 
 export const NavLinks = (currentPage) => {
   const { pathname } = useLocation();
-  console.log(pathname);
   return (
     <nav className="navlinks">
       <ul>
