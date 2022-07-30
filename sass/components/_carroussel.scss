@@ -1,11 +1,22 @@
 .carroussel {
   position: relative;
-  & img {
-    width: 100%;
-    object-fit: cover;
-    height: 415px;
-    border-radius: 25px;
-    box-shadow: 0px 10px 30px 0px $alt4;
+  border-radius: 25px;
+  box-shadow: 0px 10px 30px 0px $alt4;
+  overflow: hidden;
+
+  &__pictures {
+    display: flex;
+    flex-wrap: none;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      min-width: 100%;
+      object-fit: cover;
+      height: 415px;
+      // border-radius: 25px;
+      animation: appear-slowly 1s;
+    }
   }
 
   &__pictures-number {

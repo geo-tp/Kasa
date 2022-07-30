@@ -20,16 +20,20 @@ export const DropDown = ({ title, paragraph, list, isOpen }) => {
           }
         ></i>
       </div>
-      {dropIsOpen && (
-        <div className="dropdown__drop">
-          <ul>
-            {list?.map((equipment) => (
-              <li key={`equipment-${equipment}`}>{equipment}</li>
-            ))}
-            {paragraph && <p>{paragraph}</p>}
-          </ul>
-        </div>
-      )}
+      <div
+        className={
+          dropIsOpen
+            ? "dropdown__drop dropdown__drop--isopen"
+            : "dropdown__drop"
+        }
+      >
+        <ul>
+          {list?.map((equipment) => (
+            <li key={`equipment-${equipment}`}>{equipment}</li>
+          ))}
+          {paragraph && <p>{paragraph}</p>}
+        </ul>
+      </div>
     </div>
   );
 };

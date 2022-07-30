@@ -3,10 +3,22 @@
   from {
     opacity: 0;
     transform: scaleY(0);
+    max-height: 0;
   }
   to {
     opacity: 1;
     transform: scaleY(1);
+    max-height: 300px;
+  }
+}
+@keyframes appear-slowly-from-top2 {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 @keyframes appear-slowly {
@@ -35,7 +47,7 @@ a {
 .layout-padding {
   padding: 0px 100px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   .layout-padding {
     padding: 0px 20px;
   }
@@ -104,7 +116,7 @@ a {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  box-shadow: 0px 10px 30px 0px #a3a2a2;
+  box-shadow: 0px 10px 30px 0px #b1b1b1;
 }
 .house-card h2 {
   position: absolute;
@@ -116,6 +128,11 @@ a {
   font-style: normal;
   font-weight: 500;
   width: 40%;
+}
+@media screen and (max-width: 992px) {
+  .house-card {
+    flex-basis: 46%;
+  }
 }
 @media screen and (max-width: 768px) {
   .house-card {
@@ -135,7 +152,7 @@ a {
   border-radius: 100%;
   height: 64px;
   margin-left: 10px;
-  box-shadow: 0px 0px 10px 0px #a3a2a2;
+  box-shadow: 0px 0px 10px 0px #b1b1b1;
 }
 .host-card p {
   color: #ff6060;
@@ -170,7 +187,7 @@ a {
 }
 
 .stars i {
-  margin-right: 15px;
+  margin-right: 12px;
 }
 .stars i:last-child {
   margin-right: 0;
@@ -182,6 +199,16 @@ a {
 .stars__star--active {
   font-size: 1.5em;
   color: #ff6060;
+}
+@media screen and (max-width: 992px) {
+  .stars__star {
+    color: #e3e3e3;
+    font-size: 1.15em;
+  }
+  .stars__star--active {
+    font-size: 1.15em;
+    color: #ff6060;
+  }
 }
 @media screen and (max-width: 768px) {
   .stars i {
@@ -197,13 +224,21 @@ a {
 
 .carroussel {
   position: relative;
+  border-radius: 25px;
+  box-shadow: 0px 10px 30px 0px #b1b1b1;
+  overflow: hidden;
 }
-.carroussel img {
+.carroussel__pictures {
+  display: flex;
+  flex-wrap: none;
+  overflow: hidden;
+}
+.carroussel__pictures img {
   width: 100%;
+  min-width: 100%;
   object-fit: cover;
   height: 415px;
-  border-radius: 25px;
-  box-shadow: 0px 10px 30px 0px #a3a2a2;
+  animation: appear-slowly 1s;
 }
 .carroussel__pictures-number {
   font-size: 1.1em;
@@ -245,7 +280,8 @@ a {
 }
 
 .dropdown {
-  margin-bottom: 45px;
+  margin-bottom: 25px;
+  position: relative;
 }
 .dropdown__top {
   display: flex;
@@ -260,14 +296,17 @@ a {
   border-radius: 5px;
   max-width: 1000px;
   margin: 0 auto;
+  cursor: pointer;
   z-index: 50;
 }
 .dropdown__top__angle {
   font-size: 1.5em;
+  transition: all 300ms;
 }
 .dropdown__top__angle--reverse {
+  transition: all 300ms;
   font-size: 1.5em;
-  transform: rotate(180deg);
+  transform: rotate(540deg);
 }
 .dropdown__drop {
   color: #ff6060;
@@ -276,11 +315,16 @@ a {
   background-color: #f7f7f7;
   border-radius: 10px;
   width: 100%;
-  min-height: 150px;
+  height: 0px;
+  max-height: 0px;
+  box-shadow: 0px 10px 20px 0px #d4d4d4;
+  transition: all 200ms linear;
+  overflow: hidden;
+}
+.dropdown__drop--isopen {
+  position: relative;
+  max-height: 500px;
   height: 90%;
-  box-shadow: 0px 30px 20px 0px #d4d4d4;
-  animation: appear-slowly-from-top 300ms linear;
-  transform-origin: top;
 }
 .dropdown__drop p {
   margin: 0;
@@ -294,6 +338,7 @@ a {
   margin: 0;
   line-height: 150%;
   font-weight: 400;
+  font-size: 1.2em;
 }
 
 .header {
@@ -328,7 +373,7 @@ a {
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  box-shadow: 0px 5px 20px 0px #a3a2a2;
+  box-shadow: 0px 5px 20px 0px #b1b1b1;
 }
 .small-banner h1 {
   position: absolute;

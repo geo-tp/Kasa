@@ -1,28 +1,58 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { createRef, useRef, useState } from "react";
 
 export const Carroussel = ({ pictures }) => {
   const [displayedPictureIndex, setDisplayedPictureIndex] = useState(0);
+  const pictureRefs = [];
 
-  const handleAngleLeftClick = () => {
-    if (displayedPictureIndex - 1 < 0) {
-      setDisplayedPictureIndex(pictures.length - 1);
-    } else {
-      setDisplayedPictureIndex(displayedPictureIndex - 1);
+  const createPictureRefs = () => {
+    for (let i = 0; i < pictures.length; i++) {
+      pictureRefs.push(createRef());
     }
   };
 
-  const handleAngleRightClick = () => {
-    if (displayedPictureIndex === pictures.length - 1) {
-      setDisplayedPictureIndex(0);
+  createPictureRefs();
+
+  const handleAngleLeftClick = () => {
+    let newIndex = 0;
+    if (displayedPictureIndex - 1 < 0) {
+      newIndex = pictures.length - 1;
     } else {
-      setDisplayedPictureIndex(displayedPictureIndex + 1);
+      newIndex = displayedPictureIndex - 1;
     }
+    setDisplayedPictureIndex(newIndex);
+    pictureRefs[newIndex].current.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
+  };
+
+  const handleAngleRightClick = () => {
+    let newIndex = 0;
+    if (displayedPictureIndex !== pictures.length - 1) {
+      newIndex = displayedPictureIndex + 1;
+    }
+
+    setDisplayedPictureIndex(newIndex);
+    pictureRefs[newIndex].current.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
   };
 
   return (
     <div className="carroussel">
-      <img src={pictures[displayedPictureIndex]} alt="Pièce de la maison" />
+      <div className="carroussel__pictures">
+        {pictures?.map((picture, index) => (
+          <img
+            src={picture}
+            ref={pictureRefs[index]}
+            alt="Pièce de la maison"
+          />
+        ))}
+      </div>
       {pictures.length > 1 && (
         <i
           onClick={handleAngleLeftClick}

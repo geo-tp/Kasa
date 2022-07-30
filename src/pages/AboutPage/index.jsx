@@ -6,6 +6,7 @@ export const AboutPage = () => {
   return (
     <div className="aboutpage max-res layout-padding">
       <SmallBanner image={bannerImage} alt="Montagnes enneigées" />
+
       <DropDown
         title="Fiabilité"
         paragraph="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."

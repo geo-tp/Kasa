@@ -1,6 +1,6 @@
 .stars {
   & i {
-    margin-right: 15px;
+    margin-right: 12px;
   }
 
   & i:last-child {
@@ -14,6 +14,19 @@
       font-size: 1.5em;
 
       color: $primary;
+    }
+  }
+
+  @include tablet-design {
+    &__star {
+      color: $alt2;
+      font-size: 1.15em;
+
+      &--active {
+        font-size: 1.15em;
+
+        color: $primary;
+      }
     }
   }
 

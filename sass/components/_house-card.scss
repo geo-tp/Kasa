@@ -44,6 +44,10 @@
     width: 40%;
   }
 
+  @include tablet-design {
+    flex-basis: 46%;
+  }
+
   @include mobile-design {
     flex-basis: 100%;
     margin: 0;

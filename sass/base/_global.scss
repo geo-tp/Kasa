@@ -19,7 +19,7 @@ main {
 .layout-padding {
   padding: 0px 100px;
 
-  @include mobile-design {
+  @include laptop-design {
     padding: 0px 20px;
   }
 }
