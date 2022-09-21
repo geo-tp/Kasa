@@ -4,6 +4,14 @@ Site d'annonces - location de bien immobiliers
 
 ![](presentation.png)
 
+## Figma
+
+[See Figma models](https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design-Kasa-FR?node-id=0%3A1)
+
+## Live Demo
+
+[See Kasa Live](https://geo-tp.github.io/Kasa/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
