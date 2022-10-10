@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Header } from "./layouts/Header";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 import { Footer } from "./layouts/Footer";
 import { HouseDetailsPage } from "./pages/HouseDetailsPage";
@@ -11,6 +11,7 @@ import { NotFoundPage } from "./pages/NotFoundPage";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    {/* Here we use HashRouter to be able to serve website on Github Page */}
     <BrowserRouter>
       <Header />
       <Routes>

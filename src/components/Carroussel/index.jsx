@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { createRef, useRef, useState } from "react";
+import { createRef, useState } from "react";
 
 export const Carroussel = ({ pictures }) => {
   const [displayedPictureIndex, setDisplayedPictureIndex] = useState(0);
@@ -50,6 +50,7 @@ export const Carroussel = ({ pictures }) => {
             src={picture}
             ref={pictureRefs[index]}
             alt="Pièce de la maison"
+            key={`${picture}-{${index}}`}
           />
         ))}
       </div>
