@@ -2,10 +2,9 @@ import { SmallBanner } from "../../layouts/SmallBanner";
 import bannerImage from "../../assets/images/home.jpg";
 import { Housing } from "../../layouts/Housing";
 import { Routes } from "../../api/routes";
-import { useState } from "react";
 
 export const HomePage = () => {
-  const [houses, setHouses] = useState(Routes.getHouses());
+  const houses = Routes.getHouses();
 
   return (
     <div className="homepage max-res layout-padding">
